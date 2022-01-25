@@ -44,6 +44,7 @@ namespace HMI_Robbe_Tom
             {
                 Uri uri = new Uri("ON_OFF_schakelaar_foto_ON.png", UriKind.Relative);
 
+                
                 aanUitKnopFoto.Source = new BitmapImage(uri);
                 AanUit = true;
             }
