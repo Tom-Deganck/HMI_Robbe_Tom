@@ -20,9 +20,29 @@ namespace HMI_Robbe_Tom
     /// </summary>
     public partial class MainWindow : Window
     {
+        bool AanUit = false;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ImageButton_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void ClickAanUit(object sender, MouseButtonEventArgs e)
+        {
+            if (AanUit == true)
+            {
+                aanUitKnopFoto.Source = new BitmapImage(new Uri("ON_OFF_schakelaar_foto_OFF.png", UriKind.Relative));
+                AanUit = false;
+            }
+            else
+            {
+                aanUitKnopFoto.Source = new BitmapImage(new Uri("ON_OFF_schakelaar_foto_ONs.png", UriKind.Relative));
+                AanUit = true;
+            }
         }
     }
 }
